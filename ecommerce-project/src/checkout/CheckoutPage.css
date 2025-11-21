@@ -1,0 +1,33 @@
+.payment-summary-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+    
+}
+
+.card .card-title{
+    font-weight: bold;
+    display: flex;
+    justify-content: start;
+    padding-bottom: 15px;
+    
+}
+
+.payment-money{
+    font-weight: bold;
+display: flex;
+justify-content: end;
+}
+
+.card{
+    margin: auto;
+    margin-top: 20px;
+    padding: 0px;
+    width: 35rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;}

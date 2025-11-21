@@ -8,13 +8,13 @@ export function Home() {
       <div className="header">
 <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">Store name</a>
+    <a className="navbar-brand" href="/">Ym style</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <form className="d-flex ms-auto mt-sm-3 mb-sm-2" role="search">
-        <input className="form-control me-2  " type="search" placeholder="Search" aria-label="Search"/>
+        <input className="form-control me-2 col-lg-6 " type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form>
 
@@ -39,16 +39,15 @@ export function Home() {
           <a className="nav-link active" aria-current="page" href="#">Orders</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Cart</a>
+          <a className="nav-link" href="checkout">Cart</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
       </div>
-
 <div className="d-flex justify-content-around flex-wrap  ">
-<div className="card" style={{width: "15rem", height: "60%"}}>
+<div className="card m-3" style={{width: "15rem"}}>
   <img src="../../public/images/intermediate-composite-basketball.jpg" className="card-img-top  " alt="..."></img>
   <div className="card-body">
     <h5 className="card-title">intermediate composite basketball</h5>
@@ -69,16 +68,17 @@ export function Home() {
 </select>
 </div>
 
-    <a href="#" className="btn btn-primary">Add To Cart</a>
+    <button href="#" className="btn btn-primary">Add To Cart</button>
   </div>
 </div>
-<div className="card" style={{width: "15rem"}}>
+
+<div className="card m-3" style={{width: "15rem"}}>
   <img src="../../public/images/men-brown-flat-sneakers.jpg" className="card-img-top" alt="..."></img>
   <div className="card-body">
-    <h5 className="card-title mt-2 mb-3">men brown flat sneakers</h5>
+    <h5 className="card-title ">men brown flat sneakers</h5>
     <p className="card-text opacity-0">Added.</p>
       <div className="mt-3">
-     <select className=" mb-2 mt-3" aria-label="Default select example" >
+     <select className=" mb-2 mt-2" aria-label="Default select example" >
   <option selected>0</option>
   <option value="1">1</option>
   <option value="2">2</option>
@@ -93,10 +93,10 @@ export function Home() {
 </select>
 </div>
 
-    <a href="#" className="btn btn-primary ">Add To Cart</a>
+    <button href="#" className="btn btn-primary">Add To Cart</button>
   </div>
 </div>
-<div className="card" style={{width: "15rem"}}>
+<div className="card m-3" style={{width: "15rem"}}>
   <img src="../../public/images/men-cozy-fleece-hoodie-light-teal.jpg" className="card-img-top" alt="..."></img>
   <div className="card-body">
     <h5 className="card-title">men cozy fleece hoodie light teal</h5>
@@ -117,7 +117,7 @@ export function Home() {
 </select>
 </div>
 
-    <a href="#" className="btn btn-primary">Add To Cart</a>
+    <button href="#" className="btn btn-primary">Add To Cart</button>
   </div>
 </div>
 </div>
