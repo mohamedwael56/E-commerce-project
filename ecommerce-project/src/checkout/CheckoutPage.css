@@ -22,12 +22,97 @@ justify-content: end;
 
 .card{
     margin: auto;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 0px;
-    width: 35rem;
+    width: 20rem;
+}
+
+
+.form-check-label{
+    font-size: 14px;
+    font-weight: 500;
+}
+.form-check{
+    margin-left: 20px;
+    gap: 20px;
+}
+.delivery-option-title{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
 }
 
 .container {
     display: flex;
     justify-content: space-between;
-    gap: 20px;}
+    gap: 20px;
+}
+
+.payment-summary{
+    flex:2;
+}
+
+.delivery-options{
+    flex:1;
+}
+
+
+.product-card{
+    margin-top: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 50rem;
+}
+
+.product-card-title{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: start;
+}
+
+.product-name{
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    text-transform: capitalize;
+}
+.product-price{
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.quantity-actions{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-transform: capitalize;
+}
+.product-quantity{
+    display: flex;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.second-product-card{
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 49rem;
+}
