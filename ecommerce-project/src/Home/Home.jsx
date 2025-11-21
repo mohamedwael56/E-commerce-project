@@ -53,15 +53,47 @@ export function Home() {
   <div className="card-body">
     <h5 className="card-title">intermediate composite basketball</h5>
     <p className="card-text opacity-0">Added.</p>
+   <div>
+     <select  aria-label="Default select example" className=" mb-2 mt-2">
+  <option selected>0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+</div>
+
     <a href="#" className="btn btn-primary">Add To Cart</a>
   </div>
 </div>
 <div className="card" style={{width: "15rem"}}>
   <img src="../../public/images/men-brown-flat-sneakers.jpg" className="card-img-top" alt="..."></img>
   <div className="card-body">
-    <h5 className="card-title">men brown flat sneakers</h5>
+    <h5 className="card-title mt-2 mb-3">men brown flat sneakers</h5>
     <p className="card-text opacity-0">Added.</p>
-    <a href="#" className="btn btn-primary mt-4">Add To Cart</a>
+      <div className="mt-3">
+     <select className=" mb-2 mt-3" aria-label="Default select example" >
+  <option selected>0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+</div>
+
+    <a href="#" className="btn btn-primary ">Add To Cart</a>
   </div>
 </div>
 <div className="card" style={{width: "15rem"}}>
@@ -69,6 +101,22 @@ export function Home() {
   <div className="card-body">
     <h5 className="card-title">men cozy fleece hoodie light teal</h5>
     <p className="card-text opacity-0">Added.</p>
+      <div>
+     <select aria-label="Default select example" className=" mb-2 mt-2">
+  <option selected>0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+</div>
+
     <a href="#" className="btn btn-primary">Add To Cart</a>
   </div>
 </div>
