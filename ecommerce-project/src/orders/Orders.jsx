@@ -48,8 +48,8 @@ export function Orders (){
     <div className="container mt-5 pt-5">
         
         <div className="card" style={{width: "50rem",height:"20rem"}}>
-  <div className="card-body">
-<div className="d-flex justify-content-between w-100">
+  <div className="">
+<div className="d-flex justify-content-between w-100 p-2">
 
   <div>
     <div>Order placed:</div>
@@ -90,7 +90,7 @@ export function Orders (){
     <div className="container">
         
         <div className="card" style={{width: "50rem",height:"30rem"}}>
-<div className="d-flex justify-content-between w-100">
+<div className="d-flex justify-content-between w-100 p-2">
 
   <div>
     <div>Order placed:</div>

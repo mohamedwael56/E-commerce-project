@@ -13,7 +13,7 @@ export function CheckoutPage() {
             <a className=" navbar-brand" href="#">
               Checkout (2)
             </a>
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="orders">
               orders
             </a>
           </div>
