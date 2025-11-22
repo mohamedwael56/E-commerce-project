@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./App.css";
-import { Home } from "./Home/Home.jsx";
+import { Home } from "./pages/Home/Home.jsx";
 import {Routes,Route} from "react-router-dom";
-import { CheckoutPage } from "./checkout/CheckoutPage.jsx";
-import { Orders } from "./orders/Orders.jsx";
-import { TrackPage } from "./track page/Trackpage.jsx";
+import { CheckoutPage } from "./pages/checkout/CheckoutPage.jsx";
+import { Orders } from "./pages/orders/Orders.jsx";
+import { TrackPage } from "./pages/trackPage/Trackpage.jsx";
 function App() {
   useState;
   return (
