@@ -36,7 +36,7 @@ export function Home() {
         </li>
 
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Orders</a>
+          <a className="nav-link active" aria-current="page" href="orders">Orders</a>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="checkout">Cart</a>
