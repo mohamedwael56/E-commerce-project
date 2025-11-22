@@ -97,7 +97,7 @@ export function Home() {
   </div>
 </div>
 <div className="card m-3" style={{width: "15rem"}}>
-  <img src="../../public/images/men-cozy-fleece-hoodie-light-teal.jpg" className="card-img-top" alt="..."></img>
+  <img src="/images/men-cozy-fleece-hoodie-light-teal.jpg" className="card-img-top" alt="..."></img>
   <div className="card-body">
     <h5 className="card-title">men cozy fleece hoodie light teal</h5>
     <p className="card-text opacity-0">Added.</p>

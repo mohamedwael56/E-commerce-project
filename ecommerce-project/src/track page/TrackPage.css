@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.product-details {
+    align-content: flex-start;
+    width: 100%;
+    margin-top: 88px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+    
+}
+#root {
+    align-self: flex-start;
+    width: 100%;
+}
+
+.product-details a  {
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.product-details h1{
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 28px;    
+    text-transform: capitalize;
+}
+
+.product-details img{
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.product-details div{
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.progress-content{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.progress-bar{
+    padding-top: 20px;
+}
+
+
+.progress{
+height: 25px;
+border-radius: 15px;
+}
+
+.progress-label.active{
+    color: rgb(25, 135, 84);
+    font-weight: bold;
+    opacity: 90%;
+}

@@ -116,3 +116,12 @@ justify-content: end;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 49rem;
 }
+
+.product-card .product-details{
+    margin-top: 0px;
+}
+
+.second-product-card .product-details{
+    margin-top: 0px;
+}
+
