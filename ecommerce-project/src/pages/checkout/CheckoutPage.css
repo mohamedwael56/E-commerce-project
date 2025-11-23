@@ -102,6 +102,7 @@ justify-content: end;
 }
 .product-quantity{
     display: flex;
+    flex-direction: row;
     margin-left: 20px;
     font-size: 18px;
     font-weight: 500;
