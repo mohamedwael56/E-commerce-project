@@ -99,7 +99,7 @@ export function TrackPage() {
     <h1>arriving on november 28</h1>
     <div>men cozy fleece hoodie light teal</div>
     <div>Quantity 1</div>
-    <img src="/images/men-cozy-fleece-hoodie-light-teal.jpg" width="150px" />
+    <img src="../public/images/men-cozy-fleece-hoodie-light-teal.jpg" width="150px" />
 </div>
 </div>
   <div className="progress-content">

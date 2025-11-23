@@ -114,7 +114,7 @@ export function Orders() {
 
             <div className="container d-flex justify-content-start ">
               <img
-                src="/images/intermediate-composite-basketball.jpg"
+                src="../public/images/intermediate-composite-basketball.jpg"
                 alt=""
                 className="object-fit-cover"
                 style={{ width: "130px", height: "130px" }}
