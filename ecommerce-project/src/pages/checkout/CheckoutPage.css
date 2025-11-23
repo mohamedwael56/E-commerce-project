@@ -126,3 +126,12 @@ justify-content: end;
     margin-top: 0px;
 }
 
+
+.link-primary {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.link-primary:hover {
+  color: #0056b3;
+}

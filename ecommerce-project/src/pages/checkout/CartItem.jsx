@@ -1,25 +1,12 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+
 import { formatMoney } from "../../utilities/money";
 
 
-export function CartItem(){
-  const [cartItems, setCartItems] = useState([]);
-
-  useEffect(() => {
-    const loadCart = async () => {
-      const response = await axios.get("/api/cart-items?expand=product");
-      setCartItems(response.data);
-    };
-
-    loadCart();
-  }, []);
-
-
+export function CartItem({cart}) {
     
 return(
             <div>
-          {cartItems.map((item) => {
+          {cart.map((item) => {
             return (
               <div key={item.productId} className="product-card">
                 <div className="card-body">

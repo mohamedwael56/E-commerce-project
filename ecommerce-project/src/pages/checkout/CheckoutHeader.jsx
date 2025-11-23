@@ -1,5 +1,11 @@
-export function CheckoutHeader(){
-    return(
+export function CheckoutHeader({cart}){
+  let totalItems=0;
+  cart.forEach((item)=>{
+    totalItems += item.quantity;
+  });
+  
+  return(
+      
               <div className="Header">
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
           <div className="container-fluid">
@@ -7,7 +13,7 @@ export function CheckoutHeader(){
               Ym store
             </a>
             <a className=" navbar-brand" href="#">
-              Checkout (2)
+              Checkout ({totalItems})
             </a>
             <a className="navbar-brand" href="orders">
               orders
