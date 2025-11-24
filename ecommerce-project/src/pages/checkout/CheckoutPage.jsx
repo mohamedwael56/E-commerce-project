@@ -12,7 +12,7 @@ export function CheckoutPage({cart,loadCart}) {
 
       <div className="container">
 <CartItem cart={cart} loadCart={loadCart} />
-<PaymentSummary />
+<PaymentSummary cart={cart} />
       </div>
 
     </>

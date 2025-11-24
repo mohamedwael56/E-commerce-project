@@ -4,7 +4,7 @@ import { formatMoney } from "../../utilities/money";
 
 
 
-export function PaymentSummary() {
+export function PaymentSummary({cart}) {
    
    const [paymentSummary, setPaymentSummary] = useState()
    
@@ -12,10 +12,10 @@ export function PaymentSummary() {
      const loadPaymentSummary = async () => {
        const response = await axios.get("/api/payment-summary");
        setPaymentSummary(response.data);
+
      };
-   
      loadPaymentSummary();
-   }, [])
+   }, [cart])
    console.log(paymentSummary);
    
     return(
