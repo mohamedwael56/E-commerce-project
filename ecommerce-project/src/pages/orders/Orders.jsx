@@ -163,7 +163,7 @@ export function Orders() {
 
           <div className="container d-flex justify-content-start ">
             <img
-              src="/images/men-cozy-fleece-hoodie-light-teal.jpg"
+              src="../public/images/men-cozy-fleece-hoodie-light-teal.jpg"
               alt=""
               className="object-fit-cover"
               style={{ width: "130px", height: "130px" }}
@@ -193,7 +193,7 @@ export function Orders() {
 
             <div className="container d-flex justify-content-start ">
               <img
-                src="/images/men-brown-flat-sneakers.jpg"
+                src="../public/images/men-brown-flat-sneakers.jpg"
                 alt=""
                 className="object-fit-cover"
                 style={{ width: "130px", height: "130px" }}

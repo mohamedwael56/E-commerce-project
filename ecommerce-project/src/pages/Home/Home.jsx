@@ -4,7 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Header } from "../../component/header";
-export function Home() {
+export function Home({loadCart}) {
 
   const [ products, setProducts ] = useState([]);
 
@@ -20,6 +20,14 @@ fetchProducts();
   console.log(products)
 
 
+
+  async function addToCart(productId) {
+  await axios.post(`api/cart-items`,{
+    productId: productId,
+    quantity: 1
+  })
+  loadCart()
+  }
 
   return (
     <>
@@ -52,7 +60,11 @@ return(
 </select>
 </div>
 
-    <button href="#" className="btn btn-primary">Add To Cart</button>
+    <button 
+    onClick={ ()=> addToCart(product.id)}
+    className="btn btn-primary"
+    >Add To Cart
+    </button>
   </div>
 
 </div>

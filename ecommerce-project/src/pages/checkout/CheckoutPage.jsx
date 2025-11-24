@@ -5,13 +5,13 @@ import { CheckoutHeader } from "./CheckoutHeader";
 import { CartItem } from "./CartItem";
 import { PaymentSummary } from "./PaymentSummary";
 
-export function CheckoutPage({cart}) {
+export function CheckoutPage({cart,loadCart}) {
   return (
     <>
       <CheckoutHeader cart={cart} />
 
       <div className="container">
-<CartItem cart={cart} />
+<CartItem cart={cart} loadCart={loadCart} />
 <PaymentSummary />
       </div>
 

@@ -10,24 +10,25 @@ import { TrackPage } from "./pages/trackPage/Trackpage.jsx";
 function App() {
   const [cart, setCart] = useState([]);
 
-  useEffect(() => {
-    const loadCart = async () => {
+
+          const loadCart = async () => {
       const response = await axios.get("/api/cart-items?expand=product");
       setCart(response.data);
+      
     };
 
-    loadCart();
-  }, []);
+  useEffect(() => {
+ loadCart()
+  }, [])
 
 console.log(cart);
 
 
-  useState;
   return (
     <>
     <Routes>
-      <Route path="/" element={ <Home /> } />
-     <Route path="/checkout" element={ <CheckoutPage  cart={cart}/> } />
+      <Route path="/" element={ <Home cart={cart} loadCart={loadCart} /> } />
+     <Route path="/checkout" element={ <CheckoutPage  cart={cart}  loadCart={loadCart} /> } />
       <Route path="/orders" element={ <Orders /> } />
       <Route path="trackPage" element={ <TrackPage /> } />
       
