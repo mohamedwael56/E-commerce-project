@@ -21,7 +21,6 @@ function App() {
  loadCart()
   }, [])
 
-console.log(cart);
 
 
   return (

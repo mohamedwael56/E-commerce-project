@@ -4,7 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Header } from "../../component/header";
-export function Home({loadCart}) {
+export function Home() {
 
   const [ products, setProducts ] = useState([]);
 
@@ -26,7 +26,6 @@ fetchProducts();
     productId: productId,
     quantity: 1
   })
-  loadCart()
   }
 
   return (
