@@ -1,9 +1,10 @@
 import axios from "axios"
 import dayjs from "dayjs"
+import { Link } from "react-router-dom"
 
 export function OrderDetails({order}){
 
-
+console.log(order)
 return(
 <>
     {order.products.map((orderDetails)=>{
@@ -40,11 +41,11 @@ return(
                   Add to cart
                 </button>
               </div>
-              <a href="trackPage">
+              <Link to={`/trackPage/${order.id}/${orderDetails.productId}`}>
                 <button type="button" className="btn btn-light d-flex mb-3">
                   Track Package
                 </button>
-              </a>
+              </Link>
             </div>
 
          

@@ -1,122 +1,82 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./TrackPage.css";
+import { useParams } from "react-router-dom";
+import { useState,useEffect } from "react";
+import axios from "axios";
+import {Header} from '../../component/Header.jsx'
+import dayjs from 'dayjs'
 
 export function TrackPage() {
+
+const {orderId,productId}=useParams()
+const [order,setOrder]=useState({})
+
+useEffect(()=>{
+  const fetchOrderData =async ()=>{
+const response = await axios.get(`/api/orders/${orderId}?expand=products`)
+setOrder(response.data)
+}
+fetchOrderData()
+},[orderId])
+
+if(!order.products){
+  return null
+}
+console.log(order)
+
+const orderDetails = order.products.find((product)=>{
+return product.productId===productId
+})
+console.log(orderDetails)
+
+
+
+const totalDeliveryTimeMs = orderDetails.estimatedDeliveryTimeMs-order.orderTimeMs
+const passedTimeMs=dayjs().valueOf()-order.orderTimeMs
+let progressTime=(passedTimeMs/totalDeliveryTimeMs)*100
+
+if(progressTime>100){progressTime=100}
+
+
+
+console.log(progressTime)
+
+
+
+const isPreparing=  progressTime < 33
+const isShipping = progressTime>=33 && progressTime<100
+const isDelivered= progressTime===100
+
+
+
   return (
     <>
-      <div className="header">
-        <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-          <div className="container-fluid">
-            <a className="navbar-brand" href="/">
-              Ym style
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <form className="d-flex ms-auto mt-sm-3 mb-sm-2" role="search">
-                <input
-                  className="form-control me-2 col-lg-6 "
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button className="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
-
-              <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Dropdown
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Action
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Another action
-                      </a>
-                    </li>
-                    <li className="dropdown-divider"></li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Something else here
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link active" href="#">
-                    account
-                  </a>
-                </li>
-
-                <li className="nav-item">
-                  <a
-                    className="nav-link active"
-                    aria-current="page"
-                    href="orders"
-                  >
-                    Orders
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="checkout">
-                    Cart
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+    <Header />
       <div className="page-wrapper">
 <div className="product-details">
     <a href="orders" className="">View all orders</a>
-    <h1>arriving on november 28</h1>
-    <div>men cozy fleece hoodie light teal</div>
-    <div>Quantity 1</div>
-    <img src="../public/images/men-cozy-fleece-hoodie-light-teal.jpg" width="150px" />
+    <h1>{`arriving on ${dayjs(orderDetails.estimatedDeliveryTimeMs).format('MMMM D')}`}</h1>
+    <div>{orderDetails.product.name}</div>
+    <div> {`Quantity ${orderDetails.quantity}`}</div>
+    <img src={`/${orderDetails.product.image}`} width="150px" />
 </div>
 </div>
-  <div className="progress-content">
-  <div>
+  <div className="progress-content"  >
+  <div className={`progress-label ${isPreparing&& "active" }`}>
     Preparing
   </div>
-  <div className="progress-label active">
+  <div className={`progress-label ${isShipping&& "active" }`}>
     Shipping
   </div>
 
-  <div className="progress-label ">
+  <div className={`progress-label ${isDelivered&& "active" }`}>
     Delivered
 
   </div>
   </div>
 <div className="progress " role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div className="progress-bar bg-success" style={{width:"50%"}}></div>
+  <div className="progress-bar bg-success" style={{width:`${progressTime}%`}}></div>
 </div>
     </>
   );
