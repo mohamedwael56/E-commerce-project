@@ -1,14 +1,21 @@
+import axios from "axios"
 import dayjs from "dayjs"
-export function OrderDetails({order}){
 
+export function OrderDetails({order}){
 
 
 return(
 <>
     {order.products.map((orderDetails)=>{
         console.log(orderDetails)
-        console.log(order.products.length)
-        console.log(order.products)
+       
+        const addToCart=async ()=>{
+axios.post(`/api/cart-items/`,{
+    productId:orderDetails.product.id,
+    quantity:1
+})
+}
+
 return(
             <div className="container d-flex justify-content-start ">
             <img
@@ -24,7 +31,11 @@ return(
               <div className="d-flex ">Arriving on: {dayjs(orderDetails.estimatedDeliveryTimeMs).format('MMMM D')}</div>
               <div className="d-flex mb-2">Quantity: {orderDetails.quantity}</div>
               <div>
-                <button type="button" className="btn btn-success d-flex mb-2">
+                <button 
+                type="button"
+                className="btn btn-success d-flex mb-2"
+                onClick={addToCart}
+                >
                   {" "}
                   Add to cart
                 </button>
