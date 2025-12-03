@@ -1,6 +1,29 @@
+import { useNavigate, useSearchParams } from "react-router"
+import { useState } from "react"
+
+
 export function Header(){
+
+
+const [searchParams]=useSearchParams()
+const searchValue=searchParams.get('search')||""
+
+const [findProduct,setFindProduct]=useState(searchValue)
+function searchedProduct (event){
+setFindProduct(event.target.value)
+}
+
+const navigate=useNavigate()
+
+
+function getProduct (event){
+event.preventDefault();
+  navigate(`/?search=${findProduct}`)
+}
+
+
     return(
-              <div className="header">
+              <div className="header mb-5">
 <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div className="container-fluid">
     <a className="navbar-brand" href="/">Ym style</a>
@@ -9,8 +32,18 @@ export function Header(){
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <form className="d-flex ms-auto mt-sm-3 mb-sm-2" role="search">
-        <input className="form-control me-2 col-lg-6 " type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        <input 
+        className="form-control me-2 col-lg-6 " 
+        type="search" placeholder="Search"
+        aria-label="Search"
+        onChange={searchedProduct}
+        value={findProduct}
+         />
+        <button 
+        className="btn btn-outline-success"
+        type="submit"
+        onClick={getProduct}
+        >Search</button>
       </form>
 
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">

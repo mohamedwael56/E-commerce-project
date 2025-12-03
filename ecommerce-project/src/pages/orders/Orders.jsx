@@ -29,9 +29,9 @@ fetchOrders()
     {orders.map((order)=>{
       return(
         
-              <div className="container mt-2">
+              <div className="container">
 
-                        <div className="card" style={{ width: "50rem", height: "100%" }}>
+                        <div className="orders-card" style={{ width: "50rem", height: "100%" }}>
 
           <div className="d-flex justify-content-between w-100 p-2">
             <div>

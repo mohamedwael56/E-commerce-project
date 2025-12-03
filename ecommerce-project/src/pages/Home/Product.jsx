@@ -10,11 +10,17 @@ export function Product({ product }) {
     setQuantity(quantitySelected);
   };
 
+  const [addedProduct,setAddedProduct]=useState(false)
+
   async function addToCart(productId) {
     await axios.post(`api/cart-items`, {
       productId: productId,
       quantity,
     });
+    setAddedProduct(true)
+    setTimeout(()=>{
+      setAddedProduct(false)
+    },2000)
   }
 
   return (
@@ -23,7 +29,7 @@ export function Product({ product }) {
         <img src={product.image} className="card-img-top"></img>
         <div className=" card-body-details">
           <h5 className="card-title">{product.name}</h5>
-          <p className="card-text ">Added.</p>
+          <div className="card-text " style={{opacity:addedProduct?1:0}}>Added</div>
           <div>
             <select
               value={quantity}

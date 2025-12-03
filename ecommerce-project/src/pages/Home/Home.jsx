@@ -5,20 +5,25 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Header } from "../../component/header";
 import { Product } from "./product";
+import { useSearchParams } from "react-router";
 export function Home() {
 
   const [ products, setProducts ] = useState([]);
 
 
+
+  const [searchParams]=useSearchParams()
+  const searchedProduct = searchParams.get('search')
+
   useEffect(() => {
 const fetchProducts = async () => {
-  const response = await axios.get('api/products')
+  const response = await axios.get(searchedProduct? `api/products/?search=${searchedProduct}`:`api/products`)
     setProducts(response.data)
 
 }
 fetchProducts();
 
-  },[]);
+  },[searchedProduct]);
   console.log(products)
 
 
