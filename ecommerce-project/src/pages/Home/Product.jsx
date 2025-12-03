@@ -24,7 +24,6 @@ export function Product({ product }) {
   }
 
   return (
-    <div  className="">
       <div className="card-size">
         <img src={product.image} className="card-img-top"></img>
         <div className=" card-body-details">
@@ -59,6 +58,5 @@ export function Product({ product }) {
           </button>
         </div>
       </div>
-    </div>
   );
 }

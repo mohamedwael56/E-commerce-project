@@ -1,5 +1,6 @@
 import { useNavigate, useSearchParams } from "react-router"
 import { useState } from "react"
+import './Header.css'
 
 
 export function Header(){
@@ -31,7 +32,7 @@ event.preventDefault();
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <form className="d-flex ms-auto mt-sm-3 mb-sm-2" role="search">
+            <form className="d-flex ms-auto search-form" role="search">
         <input 
         className="form-control me-2 col-lg-6 " 
         type="search" placeholder="Search"

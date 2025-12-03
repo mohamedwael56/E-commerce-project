@@ -1,16 +1,20 @@
+#root{
+  margin: 10px 0;
+  padding: 15px;
+}
+
 body {
   margin: 0px;
-  padding: 0px;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }   
 .products-details {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin: 30px 10px;
-  align-items: stretch;
+  align-items: start;
   width: 100%;
-  justify-content: start;
+  justify-content: center;
 
 }
 
@@ -30,7 +34,7 @@ flex-direction: column;
 
 .card-text{
     padding-bottom: 15px;
-   padding-top: 30px;
+    padding-top: 30px;
     font-size: 20px;
     color: #0d6efd;
     font-weight: 600;
@@ -42,14 +46,93 @@ flex-direction: column;
 }
 
 .card-body-details .card-title{
-    height: 20px;
+    height: 55px;
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
     text-align: center;
     padding-left: 8px;
     padding-right: 8px;
 
 }
+
+
+@media (max-width:600px){
+  
+#root{
+  padding: 1px;
+  padding-right: 0;
+  margin-right: 0;
+}
+  .card-size{
+    border: 1px solid #ddd;
+    width: 5rem;
+    height: 12rem;
+    margin-bottom: 5px;
+}
+
+.card-size button{
+  color: #0d6efd;
+
+  
+}
+
+
+.products-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: start;
+  width: 100%;
+  justify-content: start;
+
+}
+
+
+
+
+.card-body-details .card-title{
+    height: 1px;
+    font-size: 8px;
+    font-weight: 600;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
+
+}
+
+
+.card-text{
+    font-size: 10px;
+    margin-top: 3px;
+    margin-bottom: 1px;
+    color: #0d6efd;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.card-size button{
+
+font-size: 10px;
+padding: 1px;
+opacity: 1;
+color: rgb(234, 239, 243);
+
+}
+
+  .card-size select {
+    font-size: 9px;
+    padding: 1px 2px;
+  }
+
+
+
+  
+}
+
+
+
