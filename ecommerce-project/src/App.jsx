@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "./App.css";
-import { Home } from "./pages/Home/Home.jsx";
+import { Home } from "./Pages/Home/Home.jsx";
 import {Routes,Route} from "react-router-dom";
-import { CheckoutPage } from "./pages/checkout/CheckoutPage.jsx";
-import { Orders } from "./pages/orders/Orders.jsx";
+import { CheckoutPage } from "./Pages/checkout/CheckoutPage.jsx";
+import { Orders } from "./Pages/orders/Orders.jsx";
 import axios from "axios";
 import { useEffect } from "react";
-import { TrackPage } from "./pages/Trackpage/TrackPage.jsx";
+import { TrackPage } from "./Pages/trackpage/TrackPage.jsx";
 function App() {
   const [cart, setCart] = useState([]);
 
