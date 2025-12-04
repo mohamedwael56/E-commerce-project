@@ -6,7 +6,7 @@ import axios from "axios";
 import { Header } from "../../component/Header.jsx";
 import { Product } from "./Product.jsx";
 import { useSearchParams } from "react-router";
-export function Home() {
+export function Home({loadCart}) {
 
   const [ products, setProducts ] = useState([]);
 
@@ -39,7 +39,7 @@ fetchProducts();
 return(
       <div key={product.id} className="">
 
-  <Product product={product} key={product.id} />
+  <Product product={product} key={product.id} loadCart={loadCart} />
   </div>
       )})
     }

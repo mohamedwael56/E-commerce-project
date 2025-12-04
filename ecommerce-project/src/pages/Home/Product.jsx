@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 
 
-export function Product({ product }) {
+export function Product({ product,loadCart }) {
   const [quantity, setQuantity] = useState(1);
 
   const selectedQuantity = (event) => {
@@ -17,6 +17,7 @@ export function Product({ product }) {
       productId: productId,
       quantity,
     });
+    await loadCart();
     setAddedProduct(true)
     setTimeout(()=>{
       setAddedProduct(false)
