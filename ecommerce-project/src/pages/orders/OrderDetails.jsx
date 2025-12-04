@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import "./Orders.css";
  
 
-export function OrderDetails({order}){
+export function OrderDetails({order,loadCart}){
 
 console.log(order)
 return(
@@ -17,6 +17,7 @@ axios.post(`https://backend-file-production.up.railway.app/api/cart-items/`,{
     productId:orderDetails.product.id,
     quantity:1
 })
+loadCart()
 }
 
 return(

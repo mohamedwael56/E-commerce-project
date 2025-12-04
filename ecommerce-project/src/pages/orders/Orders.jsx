@@ -5,7 +5,7 @@ import { Header } from "../../component/Header.jsx";
 import dayjs from "dayjs";
 import { formatMoney } from "../../utilities/money.jsx";
 import { OrderDetails } from "./OrderDetails.jsx";
-export function Orders({cart}) {
+export function Orders({cart, loadCart}) {
 
   const [orders,setOrders]=useState([])
 
@@ -50,7 +50,7 @@ fetchOrders()
             </div>
           </div>
           <hr />
-<OrderDetails order={order} cart={cart} />
+<OrderDetails order={order} cart={cart} loadCart={loadCart} />
                 </div>
       </div>
 
