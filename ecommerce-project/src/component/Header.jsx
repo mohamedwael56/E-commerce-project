@@ -56,7 +56,7 @@ event.preventDefault();
           <Link className="nav-link active" aria-current="page" to="orders">Orders</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="checkout">Cart</Link>
+          <Link className="nav-link" to="/checkout">Cart</Link>
         </li>
       </ul>
     </div>

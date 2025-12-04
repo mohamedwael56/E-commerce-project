@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { Home } from "./Pages/Home/Home.jsx";
+import { Home } from "./pages/Home/Home.jsx";
 import {Routes,Route} from "react-router-dom";
 import { CheckoutPage } from "./Pages/checkout/CheckoutPage.jsx";
 import { Orders } from "./Pages/orders/Orders.jsx";
