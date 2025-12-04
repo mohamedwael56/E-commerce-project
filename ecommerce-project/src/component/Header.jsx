@@ -1,6 +1,7 @@
 import { useNavigate, useSearchParams } from "react-router"
 import { useState } from "react"
 import './Header.css'
+import { Link } from "react-router"
 
 
 export function Header(){
@@ -27,7 +28,7 @@ event.preventDefault();
               <div className="header mb-5">
 <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div className="container-fluid">
-    <a className="navbar-brand" href="/">Ym style</a>
+    <Link className="navbar-brand" to="/">Ym style</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -52,10 +53,10 @@ event.preventDefault();
         
 
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="orders">Orders</a>
+          <Link className="nav-link active" aria-current="page" to="orders">Orders</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="checkout">Cart</a>
+          <Link className="nav-link" to="checkout">Cart</Link>
         </li>
       </ul>
     </div>

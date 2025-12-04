@@ -1,4 +1,5 @@
 import './CheckoutHeader.css'
+import { Link } from 'react-router';
 export function CheckoutHeader({cart}){
   let totalItems=0;
   cart.forEach((item)=>{
@@ -10,15 +11,15 @@ export function CheckoutHeader({cart}){
               <div className="Header">
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
           <div className="container-fluid header-content">
-            <a className="navbar-brand" href="/">
+            <Link className="navbar-brand" to="/">
               Ym store
-            </a>
+            </Link>
             <a className=" navbar-brand" href="#">
               Checkout ({totalItems})
             </a>
-            <a className="navbar-brand" href="orders">
+            <Link className="navbar-brand" to="/orders">
               orders
-            </a>
+            </Link>
           </div>
         </nav>
       </div>
