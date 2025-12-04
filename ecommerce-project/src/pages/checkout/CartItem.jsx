@@ -1,5 +1,5 @@
 import './cartItem.css'
-import { CartItemDetails } from "./cartItemDetails";
+import { CartItemDetails } from "./cartItemDetails.jsx";
 
 export function CartItem({ cart, loadCart }) {
 

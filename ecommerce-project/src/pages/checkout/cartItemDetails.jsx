@@ -1,7 +1,7 @@
-import { formatMoney } from "../../utilities/money";
+import { formatMoney } from "../../utilities/money.jsx";
 import axios from "axios";
-import { DeliveryOptions } from "./DeiveryOptions";
-import { DeliveryDate } from "./DeliveryDate";
+import { DeliveryOptions } from "./DeiveryOptions.jsx";
+import { DeliveryDate } from "./DeliveryDate.jsx";
 import { useEffect, useState } from "react";
 
 export function CartItemDetails({ item, loadCart }) {
