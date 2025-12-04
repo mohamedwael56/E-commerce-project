@@ -30,7 +30,7 @@ export function PaymentSummary({cart, loadCart}) {
   paymentSummary&&(
         <div key={paymentSummary.id} className="payment-summary">
           <div className="card">
-            <div className="card-body ">
+            <div className="payment-card-body ">
               <h3 className="card-title ">payment summary</h3>
               <div className="payment-summary-row">
                 <p className="card-subtitle mb-2 ">items ({paymentSummary.totalItems}):</p>
@@ -55,7 +55,7 @@ export function PaymentSummary({cart, loadCart}) {
               </div>
               <button 
               type="button" 
-              className="btn btn-primary mt-3"
+              className="btn btn-primary  card-button"
               onClick={placeOrders}
               >
                 Place your order

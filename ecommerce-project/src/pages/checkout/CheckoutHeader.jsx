@@ -1,3 +1,4 @@
+import './CheckoutHeader.css'
 export function CheckoutHeader({cart}){
   let totalItems=0;
   cart.forEach((item)=>{
@@ -8,7 +9,7 @@ export function CheckoutHeader({cart}){
       
               <div className="Header">
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-          <div className="container-fluid">
+          <div className="container-fluid header-content">
             <a className="navbar-brand" href="/">
               Ym store
             </a>

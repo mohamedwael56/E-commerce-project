@@ -49,8 +49,7 @@ export function CartItemDetails({ item, loadCart }) {
         <div className="d-flex flex-row">
           <img
             src={item.product.image}
-            className=""
-            style={{ width: "120px", height: "120px" }}
+            className="product-image"
           ></img>
           <div className="product-details ">
             <div className="product-name "> {item.product.name}</div>

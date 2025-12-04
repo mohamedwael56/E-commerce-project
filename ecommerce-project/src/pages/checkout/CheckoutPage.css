@@ -1,3 +1,13 @@
+.product-image{
+
+width: 120px;
+ height: 120px;
+
+}
+
+.card-button{
+    margin-top: 1rem;
+}
 .payment-summary-row{
     display: flex;
     justify-content: space-between;
@@ -10,11 +20,12 @@
     display: flex;
     justify-content: start;
     padding-bottom: 15px;
+    font-size: 15px;
     
 }
 
 .payment-money{
-    font-weight: bold;
+font-weight: bold;
 display: flex;
 justify-content: end;
 
@@ -23,10 +34,10 @@ justify-content: end;
 .card{
     margin: auto;
     margin-top: 40px;
-    padding: 0px;
+    padding: 15px;
     width: 20rem;
-    position: fixed;
-
+    background: white;
+    border-radius: 8px;
 }
 
 
@@ -76,11 +87,15 @@ justify-content: end;
     font-weight: bold;
     margin-bottom: 10px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: start;
 }
 
 .product-name{
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     font-size: 16px;
     font-weight: 600;
     text-transform: capitalize;
@@ -138,3 +153,135 @@ justify-content: end;
   color: #0056b3;
 }
 
+
+
+@media (max-width:800px){
+
+    .card{
+    margin-bottom: 30px;
+    margin-top: 10px;
+    padding: 7px;
+    width: 100%;
+    }
+
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.product-card{
+    order: 2;
+    margin-top: 60px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+
+.product-card-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: start;
+}
+
+.product-name{
+    display: flex;
+    flex-direction: wrap;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+
+.form-check-label{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.form-check{
+    font-size: 15px;
+    margin-left: 15px;
+    gap: 20px;
+}
+
+.product-image{
+    width: 80px;
+    height: 80px;
+}
+
+
+.delivery-option-title{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.product-price{
+    display: flex;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.product-quantity{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.second-product-card{
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 49rem;
+}
+
+.quantity-actions{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+.payment-summary{
+display: flex;
+justify-content: center;
+
+}
+.payment-summary-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 12px;
+    
+}
+
+.card-button{
+    font-size: 12px;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+}
+
+
+}
