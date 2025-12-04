@@ -13,11 +13,11 @@ return(
         console.log(orderDetails)
        
         const addToCart=async ()=>{
-axios.post(`https://backend-file-production.up.railway.app/api/cart-items/`,{
+await axios.post(`https://backend-file-production.up.railway.app/api/cart-items/`,{
     productId:orderDetails.product.id,
     quantity:1
 })
-loadCart()
+await loadCart()
 }
 
 return(
