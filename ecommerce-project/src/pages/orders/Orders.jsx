@@ -31,9 +31,9 @@ fetchOrders()
         
               <div className="container">
 
-                        <div className="orders-card" style={{ width: "50rem", height: "100%" }}>
+                        <div className="orders-card" >
 
-          <div className="d-flex justify-content-between w-100 p-2">
+          <div className="header-details">
             <div>
               <div>Order placed:</div>
               <div>{dayjs(order.orderTimeMs).format('MMMM D')}</div>

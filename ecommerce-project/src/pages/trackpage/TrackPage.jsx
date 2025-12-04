@@ -77,7 +77,7 @@ export function TrackPage() {
         </div>
       </div>
       <div
-        className="progress "
+        className="progress"
         role="progressbar"
         aria-label="Success example"
         aria-valuenow="25"

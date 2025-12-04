@@ -1,6 +1,8 @@
 import axios from "axios"
 import dayjs from "dayjs"
 import { Link } from "react-router-dom"
+import "./Orders.css";
+ 
 
 export function OrderDetails({order}){
 
@@ -18,12 +20,11 @@ axios.post(`/api/cart-items/`,{
 }
 
 return(
-            <div className="container d-flex justify-content-start ">
+            <div className="container order-details ">
             <img
               src={orderDetails.product.image}
               alt=""
               className="object-fit-cover"
-              style={{ width: "130px", height: "130px" }}
             />
             <div className="">
               <div className="d-flex mb-2 order-name">
