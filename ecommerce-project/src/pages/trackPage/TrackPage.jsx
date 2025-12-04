@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Header } from "../../component/Header.jsx";
 import dayjs from "dayjs";
+import { Link } from "react-router-dom";
 
 export function TrackPage() {
   const { orderId, productId } = useParams();
@@ -51,9 +52,9 @@ export function TrackPage() {
       <Header />
       <div className="page-wrapper">
         <div className="product-details">
-          <a href="orders" className="">
+          <Link to="/orders" className="">
             View all orders
-          </a>
+          </Link>
           <h1>{`${
             progressTime === 100 ? "Delivered on" : "arriving on"
           } ${dayjs(orderDetails.estimatedDeliveryTimeMs).format(
