@@ -1,10 +1,10 @@
 import { useState,useEffect } from "react";
 import "./Orders.css";
 import axios from "axios";
-import { Header } from "../../component/header";
+import { Header } from "../../component/Header";
 import dayjs from "dayjs";
 import { formatMoney } from "../../utilities/money";
-import { OrderDetails } from "./orderDetails";
+import { OrderDetails } from "./OrderDetails";
 export function Orders({cart}) {
 
   const [orders,setOrders]=useState([])

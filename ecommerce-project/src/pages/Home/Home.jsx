@@ -3,8 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Header } from "../../component/header";
-import { Product } from "./product";
+import { Header } from "../../component/Header";
+import { Product } from "./Product";
 import { useSearchParams } from "react-router";
 export function Home() {
 
