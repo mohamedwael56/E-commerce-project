@@ -13,7 +13,7 @@ export function Product({ product }) {
   const [addedProduct,setAddedProduct]=useState(false)
 
   async function addToCart(productId) {
-    await axios.post(`api/cart-items`, {
+    await axios.post(`https://backend-file-production.up.railway.app/api/cart-items`, {
       productId: productId,
       quantity,
     });
@@ -25,7 +25,7 @@ export function Product({ product }) {
 
   return (
       <div className="card-size">
-        <img src={product.image} className="card-img-top"></img>
+        <img src={`https://backend-file-production.up.railway.app/${product.image}`} className="card-img-top"></img>
         <div className=" card-body-details">
           <h5 className="card-title">{product.name}</h5>
           <div className="card-text " style={{opacity:addedProduct?1:0}}>Added</div>

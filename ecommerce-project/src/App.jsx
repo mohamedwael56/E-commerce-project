@@ -12,7 +12,7 @@ function App() {
 
 
           const loadCart = async () => {
-      const response = await axios.get("/api/cart-items?expand=product");
+      const response = await axios.get("https://backend-file-production.up.railway.app/api/cart-items?expand=product");
       setCart(response.data);
       
     };

@@ -14,7 +14,7 @@ export function TrackPage() {
   useEffect(() => {
     const fetchOrderData = async () => {
       const response = await axios.get(
-        `/api/orders/${orderId}?expand=products`
+        `https://backend-file-production.up.railway.app/api/orders/${orderId}?expand=products`
       );
       setOrder(response.data);
     };
@@ -61,7 +61,7 @@ export function TrackPage() {
           )}`}</h1>
           <div>{orderDetails.product.name}</div>
           <div> {`Quantity ${orderDetails.quantity}`}</div>
-          <img src={`/${orderDetails.product.image}`} width="150px" />
+          <img src={`https://backend-file-production.up.railway.app/${orderDetails.product.image}`} width="150px" />
         </div>
       </div>
       <div className="progress-content">

@@ -8,11 +8,11 @@ export default defineConfig({
 server:{
   proxy:{
     '/api':{
-      target:`http://localhost:3000`
+      target:`https://backend-file-production.up.railway.app`
 
     },
     '/images':{
-      target:'http://localhost:3000'
+      target:'https://backend-file-production.up.railway.app'
     }
   }
 }

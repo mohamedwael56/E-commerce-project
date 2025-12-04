@@ -17,7 +17,7 @@ export function Home() {
 
   useEffect(() => {
 const fetchProducts = async () => {
-  const response = await axios.get(searchedProduct? `api/products/?search=${searchedProduct}`:`api/products`)
+  const response = await axios.get(searchedProduct? `https://backend-file-production.up.railway.app/api/products/?search=${searchedProduct}`:`https://backend-file-production.up.railway.app/api/products`)
     setProducts(response.data)
 
 }
@@ -25,7 +25,6 @@ fetchProducts();
 
   },[searchedProduct]);
   console.log(products)
-
 
 
 

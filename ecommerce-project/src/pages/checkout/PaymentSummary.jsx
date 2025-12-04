@@ -10,7 +10,7 @@ export function PaymentSummary({cart, loadCart}) {
    
    useEffect(() => {
      const loadPaymentSummary = async () => {
-       const response = await axios.get("/api/payment-summary");
+       const response = await axios.get("https://backend-file-production.up.railway.app/api/payment-summary");
        setPaymentSummary(response.data);
 
      };
@@ -19,7 +19,7 @@ export function PaymentSummary({cart, loadCart}) {
   const navigate = useNavigate();
 
    async function placeOrders (){
-    await axios.post('/api/orders')
+    await axios.post('https://backend-file-production.up.railway.app/api/orders')
     await loadCart()
     navigate('/orders')
    }

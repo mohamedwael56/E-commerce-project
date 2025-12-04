@@ -11,7 +11,7 @@ export function CartItemDetails({ item, loadCart }) {
   const [updatedQuantity, setUpdatedQuantity] = useState(false);
   const saveUpdatedQuantity = async () => {
     if (updatedQuantity) {
-   await   axios.put(`/api/cart-items/${item.productId}`, {
+   await   axios.put(`https://backend-file-production.up.railway.app/api/cart-items/${item.productId}`, {
         quantity
       });
       await loadCart()
@@ -29,7 +29,7 @@ export function CartItemDetails({ item, loadCart }) {
   useEffect(() => {
     const loadDeliveryOptions = async () => {
       const response = await axios.get(
-        "/api/delivery-options?expand=estimatedDeliveryTime"
+        "https://backend-file-production.up.railway.app/api/delivery-options?expand=estimatedDeliveryTime"
       );
       SetDeliveryOptions(response.data);
     };
@@ -38,7 +38,7 @@ export function CartItemDetails({ item, loadCart }) {
   }, []);
 
   const deleteItem = async (productId) => {
-    await axios.delete(`/api/cart-items/${productId}`);
+    await axios.delete(`https://backend-file-production.up.railway.app/api/cart-items/${productId}`);
     loadCart();
   };
 
@@ -48,7 +48,7 @@ export function CartItemDetails({ item, loadCart }) {
         <DeliveryDate item={item} deliveryOptions={deliveryOptions} />
         <div className="d-flex flex-row">
           <img
-            src={item.product.image}
+            src={`https://backend-file-production.up.railway.app/${item.product.image}`}
             className="product-image"
           ></img>
           <div className="product-details ">

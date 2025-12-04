@@ -13,7 +13,7 @@ return(
         console.log(orderDetails)
        
         const addToCart=async ()=>{
-axios.post(`/api/cart-items/`,{
+axios.post(`https://backend-file-production.up.railway.app/api/cart-items/`,{
     productId:orderDetails.product.id,
     quantity:1
 })
@@ -22,7 +22,7 @@ axios.post(`/api/cart-items/`,{
 return(
             <div className="container order-details ">
             <img
-              src={orderDetails.product.image}
+              src={`https://backend-file-production.up.railway.app/${orderDetails.product.image}`}
               alt=""
               className="object-fit-cover"
             />

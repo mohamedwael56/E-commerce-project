@@ -19,7 +19,7 @@ export function DeliveryOptions({ item, loadCart, deliveryOptions }) {
           }
 
           const updateDeliveryOption= async ()=>{
-             await axios.put(`/api/cart-items/${item.productId}`,{
+             await axios.put(`https://backend-file-production.up.railway.app/api/cart-items/${item.productId}`,{
               deliveryOptionId:deliveryOption.id
             })
            await loadCart()

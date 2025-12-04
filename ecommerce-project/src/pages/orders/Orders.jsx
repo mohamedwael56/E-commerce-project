@@ -12,7 +12,7 @@ export function Orders({cart}) {
   useEffect(()=>{
 
 const fetchOrders= async ()=>{
-  const response = await axios.get('/api/orders?expand=products')
+  const response = await axios.get('https://backend-file-production.up.railway.app/api/orders?expand=products')
   setOrders(response.data)
 }
 fetchOrders()
